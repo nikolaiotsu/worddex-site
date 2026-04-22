@@ -3,26 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordDex - AI-Powered Flashcards</title>
+    <meta name="description" content="WordDex — snap text, learn with AI flashcards, and remember vocabulary for good.">
+    <meta name="theme-color" content="#0f1419">
+    <title>WordDex — AI flashcards for words you actually meet</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            max-width: 600px;
-            margin: 80px auto;
-            padding: 20px;
-            text-align: center;
-            color: #333;
+        :root {
+            --bg: #0b0f14;
+            --bg-elevated: #121922;
+            --text: #e8edf4;
+            --muted: #8b98a8;
+            --accent: #5eead4;
+            --accent-dim: rgba(94, 234, 212, 0.14);
+            --ring: rgba(94, 234, 212, 0.45);
+            --radius: 20px;
+            --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+            --font: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
-        h1 { font-size: 2.5em; margin-bottom: 0.2em; }
-        p { font-size: 1.2em; color: #666; }
-        a.badge img { height: 50px; margin-top: 20px; }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100dvh;
+            font-family: var(--font);
+            color: var(--text);
+            background:
+                radial-gradient(1200px 600px at 50% -10%, rgba(94, 234, 212, 0.12), transparent 55%),
+                radial-gradient(900px 500px at 100% 40%, rgba(99, 102, 241, 0.08), transparent 50%),
+                var(--bg);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card {
+            background: linear-gradient(145deg, rgba(18, 25, 34, 0.92), rgba(12, 17, 24, 0.88));
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            padding: clamp(2rem, 5vw, 3rem);
+            box-shadow: var(--shadow);
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .logo span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px var(--accent);
+        }
+
+        h1 {
+            margin: 0 0 0.75rem;
+            font-size: clamp(2rem, 6vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+        }
+
+        .tagline {
+            margin: 0 auto 1.75rem;
+            max-width: 28ch;
+            font-size: clamp(1.05rem, 2.8vw, 1.2rem);
+            color: var(--muted);
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .pill {
+            font-size: 0.8125rem;
+            color: var(--text);
+            background: var(--accent-dim);
+            border: 1px solid rgba(94, 234, 212, 0.22);
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+        }
+
+        .cta {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta:focus-visible {
+            outline: 2px solid var(--ring);
+            outline-offset: 4px;
+            border-radius: 12px;
+        }
+
+        .cta img {
+            height: 54px;
+            width: auto;
+            vertical-align: middle;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        @media (hover: hover) {
+            .cta:hover img {
+                transform: translateY(-2px);
+                opacity: 0.95;
+            }
+        }
+
+        .fineprint {
+            margin-top: 1.75rem;
+            font-size: 0.8125rem;
+            color: var(--muted);
+        }
+
+        .fineprint a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .fineprint a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <h1>WordDex</h1>
-    <p>See a word. Own it forever.</p>
-    <a class="badge" href="https://apps.apple.com/us/app/worddex/id6752800274">
-        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
-    </a>
+    <div class="wrap">
+        <main class="card">
+            <div class="logo"><span aria-hidden="true"></span> WordDex</div>
+            <h1>See a word. Own it forever.</h1>
+            <p class="tagline">Turn real-world text into flashcards with AI—built for learners who want words to stick.</p>
+            <div class="pill-row" aria-label="Highlights">
+                <span class="pill">Camera &amp; scan</span>
+                <span class="pill">Smart definitions</span>
+                <span class="pill">Spaced review</span>
+            </div>
+            <a class="cta" href="https://apps.apple.com/us/app/worddex/id6752800274" rel="noopener noreferrer">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download WordDex on the App Store">
+            </a>
+            <p class="fineprint">worddex.io · <a href="https://apps.apple.com/us/app/worddex/id6752800274">Get the app</a></p>
+        </main>
+    </div>
 </body>
 </html>
