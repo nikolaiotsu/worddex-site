@@ -74,6 +74,56 @@
     letter-spacing: 0.06em;
   }
 
+  /* Korean page: Noto Sans KR (load on ko page only) */
+  html[lang="ko"] body,
+  html[lang="ko"] .hero-sub,
+  html[lang="ko"] .how-desc,
+  html[lang="ko"] .ws-desc,
+  html[lang="ko"] .ws-list li,
+  html[lang="ko"] .game-desc,
+  html[lang="ko"] .deck-sub,
+  html[lang="ko"] .cta-sub,
+  html[lang="ko"] .nav-links a,
+  html[lang="ko"] .stat-label,
+  html[lang="ko"] .foot-links a,
+  html[lang="ko"] .foot-credit,
+  html[lang="ko"] .hero-title,
+  html[lang="ko"] .s-title,
+  html[lang="ko"] .ws-title,
+  html[lang="ko"] .how-name,
+  html[lang="ko"] .cta-title,
+  html[lang="ko"] .deck-name,
+  html[lang="ko"] .stat-num {
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  html[lang="ko"] .nav-logo { font-family: var(--display), monospace; }
+  html[lang="ko"] .foot-logo { font-family: var(--display), monospace; }
+
+  html[lang="ko"] .hero-title {
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+  }
+  html[lang="ko"] .ws-title {
+    line-height: 1.12;
+    letter-spacing: 0.03em;
+  }
+  html[lang="ko"] .s-title {
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+  html[lang="ko"] .how-name {
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+  html[lang="ko"] .cta-title {
+    line-height: 1.12;
+    letter-spacing: 0.03em;
+  }
+  html[lang="ko"] .deck-name {
+    letter-spacing: 0.05em;
+  }
+  html[lang="ko"] .decks .s-title span { color: var(--mauve); }
+
   body {
     background: var(--titanium);
     color: var(--text-dark);
@@ -124,10 +174,13 @@
     border-radius: 4px;
     overflow: hidden;
   }
+  .lang-switch > .lang-switch__item + .lang-switch__item {
+    border-left: 1px solid var(--border);
+  }
   .lang-switch a.lang-switch__item,
   .lang-switch span.lang-switch__item {
     display: inline-block;
-    padding: 7px 10px;
+    padding: 7px 9px;
     text-decoration: none;
     color: var(--text-mid);
   }
