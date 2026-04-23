@@ -1,7 +1,8 @@
   :root {
-    --navy:       #1a2540;
-    --navy-mid:   #22304e;
-    --navy-light: #2e3f60;
+    /* deep plum / warm ink — pairs with --mauve, not blue-navy */
+    --navy:       #2a1a24;
+    --navy-mid:   #3d2630;
+    --navy-light: #5c3d4d;
     --parchment:  #f0ebe3;
     --titanium:   #e4ddd4;
     --card-white: #f7f3ee;
@@ -114,7 +115,7 @@
 
   /* Hero right — screenshot 1: home screen */
   .hero-right {
-    background: linear-gradient(165deg, #243352 0%, var(--navy) 42%, #121a2c 100%);
+    background: linear-gradient(165deg, #3d2633 0%, var(--navy) 45%, #161018 100%);
     display: flex; align-items: center; justify-content: center;
     padding: 60px 48px; position: relative; overflow: hidden;
   }
@@ -123,7 +124,7 @@
     background-image:
       radial-gradient(ellipse 65% 85% at 50% 52%, rgba(255,255,255,0.09) 0%, transparent 58%),
       radial-gradient(circle at 30% 70%, rgba(157,110,126,0.16) 0%, transparent 52%),
-      radial-gradient(circle at 78% 18%, rgba(106,158,127,0.1) 0%, transparent 42%);
+      radial-gradient(circle at 78% 18%, rgba(196,154,60,0.1) 0%, transparent 42%);
   }
   .bracket { position: absolute; width: 22px; height: 22px; }
   .bracket.tl { top: 20px; left: 20px; border-top: 1px solid rgba(240,235,227,0.2); border-left: 1px solid rgba(240,235,227,0.2); }
@@ -142,7 +143,7 @@
     filter: drop-shadow(0 28px 48px rgba(0,0,0,0.55)) drop-shadow(0 0 1px rgba(255,255,255,0.12));
   }
   .phone-shell {
-    width: 240px; background: #10192a; border-radius: 38px; padding: 10px;
+    width: 240px; background: #1a1418; border-radius: 38px; padding: 10px;
     border: 1px solid rgba(255,255,255,0.18);
     box-shadow:
       0 0 0 2px rgba(0,0,0,0.35),
@@ -167,7 +168,7 @@
   .ph {
     width: 100%; height: 100%;
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
-    background: #1c2a42;
+    background: #2a1f26;
     font-family: var(--mono); font-size: 10px; color: rgba(240,235,227,0.25);
     letter-spacing: 0.12em; text-transform: uppercase; text-align: center; padding: 16px;
   }
@@ -177,7 +178,7 @@
   /* inline phone — smaller, used in how-it-works */
   .phone-inline {
     width: 160px; flex-shrink: 0;
-    background: #10192a; border-radius: 28px; padding: 7px;
+    background: #1a1418; border-radius: 28px; padding: 7px;
     border: 1px solid rgba(255,255,255,0.14);
     box-shadow:
       0 0 0 2px rgba(0,0,0,0.22),
@@ -246,7 +247,7 @@
   /* small phone in how-it-works */
   .phone-sm {
     width: 120px; flex-shrink: 0;
-    background: #10192a; border-radius: 22px; padding: 6px;
+    background: #1a1418; border-radius: 22px; padding: 6px;
     border: 1px solid rgba(255,255,255,0.16);
     box-shadow:
       0 0 0 2px rgba(0,0,0,0.25),
@@ -264,7 +265,7 @@
   }
   .phone-sm .phone-screen,
   .phone-sm-light .phone-screen { border-radius: 17px; }
-  .phone-sm .ph { background: #1c2a42; font-size: 9px; }
+  .phone-sm .ph { background: #2a1f26; font-size: 9px; }
   .phone-sm-light .ph { background: #c4bdb5; color: rgba(42,36,32,0.3); font-size: 9px; }
   /* ── WORD SCOPE ── */
   /* screenshot 4: the word scope detail screen, beside the copy */
@@ -279,7 +280,7 @@
     border-left: 1px solid var(--border);
     display: flex; align-items: center; justify-content: center;
     padding: 48px;
-    background: linear-gradient(200deg, #283a5c 0%, var(--navy) 50%, #121a2c 100%);
+    background: linear-gradient(200deg, #452d38 0%, var(--navy) 52%, #161018 100%);
     position: relative; overflow: hidden;
   }
   .ws-right::before {
@@ -300,7 +301,7 @@
   /* phone in ws right panel */
   .ws-phone {
     width: 200px;
-    background: #10192a; border-radius: 32px; padding: 8px;
+    background: #1a1418; border-radius: 32px; padding: 8px;
     border: 1px solid rgba(255,255,255,0.18);
     box-shadow:
       0 0 0 2px rgba(0,0,0,0.35),
