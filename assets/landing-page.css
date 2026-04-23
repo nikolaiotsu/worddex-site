@@ -24,6 +24,13 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
 
+  /* JA/KO: stricter line breaks + keep morphemes together where the engine supports it */
+  html[lang="ja"],
+  html[lang="ko"] {
+    line-break: strict;
+    word-break: keep-all;
+  }
+
   /* Japanese page: readable body copy (load Zen Kaku Gothic New on ja page only) */
   html[lang="ja"] body,
   html[lang="ja"] .hero-sub,
