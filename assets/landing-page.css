@@ -544,8 +544,12 @@
   /* ── LANGUAGES ── */
   .langs { padding: 80px 48px; background: var(--parchment); }
   .lang-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 48px; }
-  .lang-pill { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 16px; border: 1px solid var(--border); color: var(--text-mid); background: var(--card-white); transition: all 0.2s; }
-  .lang-pill:hover, .lang-pill.primary { border-color: var(--mauve); color: var(--mauve-deep); background: var(--mauve-pale); }
+  .lang-pill {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 8px 16px; border: 1px solid var(--border); color: var(--text-mid); background: var(--card-white);
+    cursor: default;
+  }
+  .lang-pill.primary { border-color: var(--mauve); color: var(--mauve-deep); background: var(--mauve-pale); }
 
   /* ── FOOTER CTA ── */
   .footer-cta { padding: 120px 48px; background: var(--navy); text-align: center; position: relative; overflow: hidden; border-bottom: none; }
