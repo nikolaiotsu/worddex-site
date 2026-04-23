@@ -576,8 +576,18 @@
   @media (max-width: 900px) {
     nav { padding: 16px 24px; flex-wrap: wrap; gap: 12px; }
     .nav-links { display: none; }
-    .nav-right { width: 100%; justify-content: space-between; gap: 10px; }
-    .store-cluster { flex: 1; justify-content: flex-end; min-width: min(100%, 280px); }
+    .nav-right {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+    .store-cluster {
+      flex: none;
+      justify-content: flex-start;
+      min-width: 0;
+    }
     .lang-switch { flex-shrink: 0; }
     .hero { grid-template-columns: 1fr; }
     .hero-left { padding: 56px 24px; border-right: none; }
