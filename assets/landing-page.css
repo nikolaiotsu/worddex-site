@@ -49,6 +49,31 @@
   html[lang="ja"] .nav-logo { font-family: var(--display), monospace; }
   html[lang="ja"] .foot-logo { font-family: var(--display), monospace; }
 
+  /* Japanese: CJK needs looser line-height & tracking than VT323/Latin defaults */
+  html[lang="ja"] .hero-title {
+    line-height: 1.22;
+    letter-spacing: 0.06em;
+  }
+  html[lang="ja"] .ws-title {
+    line-height: 1.12;
+    letter-spacing: 0.05em;
+  }
+  html[lang="ja"] .s-title {
+    line-height: 1.18;
+    letter-spacing: 0.04em;
+  }
+  html[lang="ja"] .how-name {
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+  }
+  html[lang="ja"] .cta-title {
+    line-height: 1.12;
+    letter-spacing: 0.05em;
+  }
+  html[lang="ja"] .deck-name {
+    letter-spacing: 0.06em;
+  }
+
   body {
     background: var(--titanium);
     color: var(--text-dark);
