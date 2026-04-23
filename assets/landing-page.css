@@ -589,19 +589,71 @@
       min-width: 0;
     }
     .lang-switch { flex-shrink: 0; }
-    .hero { grid-template-columns: 1fr; }
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
     .hero-left { padding: 56px 24px; border-right: none; }
-    .hero-right { display: none; }
+    .hero-right {
+      display: flex;
+      padding: 40px 24px 56px;
+      border-top: 1px solid var(--border);
+    }
+    .hero-right .bracket,
+    .hero-right .hero-watermark { display: none; }
+    .hero-right .phone-wrap { margin: 0 auto; }
+    .hero-right .phone-shell {
+      width: min(220px, 82vw);
+      transform: none;
+    }
+    .hero-right .phone-shell:hover {
+      transform: none;
+    }
+
     .how { padding: 64px 24px; }
-    .how-step, .how-step.reverse { grid-template-columns: 1fr; }
-    .how-shot { display: none; }
+    .how-step,
+    .how-step.reverse { grid-template-columns: 1fr; }
+    .how-step.reverse .how-copy { order: 1; }
+    .how-step.reverse .how-shot { order: 2; }
+    .how-shot {
+      display: flex;
+      padding: 32px 24px 40px;
+      border-top: 1px solid var(--border);
+    }
     .how-step:not(.reverse) .how-copy,
     .how-step.reverse .how-copy { border: none; }
+
     .wordscope { grid-template-columns: 1fr; padding: 64px 24px; }
-    .ws-left { padding-right: 0; padding-bottom: 40px; }
-    .ws-right { display: none; }
-    .game-section { grid-template-columns: 1fr; padding: 64px 24px; }
-    .game-shot { display: none; }
+    .ws-left { padding-right: 0; padding-bottom: 0; }
+    .ws-right {
+      display: flex;
+      padding: 48px 24px 56px;
+      border-left: none;
+      border-top: 1px solid var(--border);
+    }
+    .ws-right .ws-phone {
+      width: min(200px, 78vw);
+      transform: none;
+    }
+    .ws-right .ws-phone:hover {
+      transform: none;
+    }
+
+    .game-section {
+      grid-template-columns: 1fr;
+      padding: 64px 24px;
+    }
+    .game-copy {
+      order: 1;
+      padding: 0 0 8px 0;
+    }
+    .game-shot {
+      display: flex;
+      order: 2;
+      padding: 40px 24px 48px;
+      border-right: none;
+      border-top: 1px solid var(--border);
+    }
     .decks { padding: 64px 24px; }
     .langs { padding: 64px 24px; }
     .footer-cta { padding: 80px 24px; }
