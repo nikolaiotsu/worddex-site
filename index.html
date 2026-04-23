@@ -1,314 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WordDex — snap text, learn with AI flashcards, and remember vocabulary for good.">
-    <meta name="theme-color" content="#0f1419">
-    <title>WordDex — AI flashcards for words you actually meet</title>
-    <style>
-        :root {
-            --bg: #0b0f14;
-            --bg-elevated: #121922;
-            --text: #e8edf4;
-            --muted: #8b98a8;
-            --accent: #5eead4;
-            --accent-dim: rgba(94, 234, 212, 0.14);
-            --ring: rgba(94, 234, 212, 0.45);
-            --radius: 20px;
-            --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-            --font: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-
-        *, *::before, *::after { box-sizing: border-box; }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100dvh;
-            font-family: var(--font);
-            color: var(--text);
-            background:
-                radial-gradient(1200px 600px at 50% -10%, rgba(94, 234, 212, 0.12), transparent 55%),
-                radial-gradient(900px 500px at 100% 40%, rgba(99, 102, 241, 0.08), transparent 50%),
-                var(--bg);
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .wrap {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: clamp(1.5rem, 4vw, 2.5rem);
-            padding-bottom: clamp(2.5rem, 6vw, 4rem);
-            display: flex;
-            flex-direction: column;
-            gap: clamp(1.75rem, 4vw, 2.5rem);
-        }
-
-        .hero-media {
-            text-align: center;
-        }
-
-        .hero-video-frame {
-            display: inline-block;
-            padding: 10px;
-            border-radius: 28px;
-            background: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: var(--shadow);
-        }
-
-        .hero-video {
-            display: block;
-            width: min(220px, 52vw);
-            height: auto;
-            border-radius: 18px;
-            vertical-align: middle;
-            background: var(--bg-elevated);
-        }
-
-        .hero-caption {
-            margin: 0.75rem 0 0;
-            font-size: 0.8125rem;
-            color: var(--muted);
-        }
-
-        .card {
-            background: linear-gradient(145deg, rgba(18, 25, 34, 0.92), rgba(12, 17, 24, 0.88));
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: var(--radius);
-            padding: clamp(2rem, 5vw, 3rem);
-            box-shadow: var(--shadow);
-            text-align: center;
-            backdrop-filter: blur(12px);
-        }
-
-        .logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.8125rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 1.25rem;
-        }
-
-        .logo span {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--accent);
-            box-shadow: 0 0 12px var(--accent);
-        }
-
-        h1 {
-            margin: 0 0 0.75rem;
-            font-size: clamp(2rem, 6vw, 2.75rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-        }
-
-        .tagline {
-            margin: 0 auto 1.75rem;
-            max-width: 28ch;
-            font-size: clamp(1.05rem, 2.8vw, 1.2rem);
-            color: var(--muted);
-        }
-
-        .pill-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .pill {
-            font-size: 0.8125rem;
-            color: var(--text);
-            background: var(--accent-dim);
-            border: 1px solid rgba(94, 234, 212, 0.22);
-            padding: 0.35rem 0.75rem;
-            border-radius: 999px;
-        }
-
-        .cta {
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
-        .cta:focus-visible {
-            outline: 2px solid var(--ring);
-            outline-offset: 4px;
-            border-radius: 12px;
-        }
-
-        .cta img {
-            height: 54px;
-            width: auto;
-            vertical-align: middle;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-        }
-
-        @media (hover: hover) {
-            .cta:hover img {
-                transform: translateY(-2px);
-                opacity: 0.95;
-            }
-        }
-
-        .fineprint {
-            margin-top: 1.75rem;
-            font-size: 0.8125rem;
-            color: var(--muted);
-        }
-
-        .fineprint a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .fineprint a:hover {
-            text-decoration: underline;
-        }
-
-        .shots {
-            margin: 0;
-        }
-
-        .shots h2 {
-            margin: 0 0 1rem;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: var(--muted);
-            text-align: center;
-        }
-
-        .shot-scroll {
-            display: flex;
-            gap: 1rem;
-            overflow-x: auto;
-            padding: 0.25rem 1rem 1rem;
-            scroll-snap-type: x mandatory;
-            scroll-padding-inline: 1rem;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-color: rgba(94, 234, 212, 0.35) transparent;
-        }
-
-        .shot-scroll:focus-visible {
-            outline: 2px solid var(--ring);
-            outline-offset: 4px;
-            border-radius: 12px;
-        }
-
-        .shot {
-            flex: 0 0 auto;
-            scroll-snap-align: center;
-            margin: 0;
-            width: min(240px, 78vw);
-        }
-
-        .shot img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
-        }
-
-        .shot figcaption {
-            margin-top: 0.5rem;
-            font-size: 0.75rem;
-            color: var(--muted);
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="WordDex — snap text, learn with AI flashcards, and remember vocabulary for good.">
+<meta name="theme-color" content="#0f1419">
+<title>WordDex — AI Flashcards for JLPT, TOEIC & TOPIK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/landing-page.css">
 </head>
 <body>
-    <div class="wrap">
-        <div class="hero-media">
-            <div class="hero-video-frame">
-                <video
-                    id="hero-video"
-                    class="hero-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    poster="assets/worddex-icon.png"
-                    aria-label="WordDex logo loading animation"
-                >
-                    <source src="assets/worddex-loading.mp4" type="video/mp4">
-                </video>
-            </div>
-            <p class="hero-caption">Same splash animation as in the app</p>
-        </div>
 
-        <main class="card">
-            <div class="logo"><span aria-hidden="true"></span> WordDex</div>
-            <h1>See a word. Own it forever.</h1>
-            <p class="tagline">Turn real-world text into flashcards with AI—built for learners who want words to stick.</p>
-            <div class="pill-row" aria-label="Highlights">
-                <span class="pill">Camera &amp; scan</span>
-                <span class="pill">Smart definitions</span>
-                <span class="pill">Spaced review</span>
-            </div>
-            <a class="cta" href="https://apps.apple.com/us/app/worddex/id6752800274" rel="noopener noreferrer">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download WordDex on the App Store">
-            </a>
-            <p class="fineprint">worddex.io · <a href="https://apps.apple.com/us/app/worddex/id6752800274">Get the app</a></p>
-        </main>
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">WORD<span>DEX</span></a>
+  <ul class="nav-links">
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#wordscope">Word Scope</a></li>
+    <li><a href="#decks">Exam Decks</a></li>
+    <li><a href="#languages">Languages</a></li>
+  </ul>
+  <a href="https://apps.apple.com/us/app/worddex/id6752800274" class="nav-cta" rel="noopener noreferrer">↓ App Store</a>
+</nav>
 
-        <section class="shots" aria-labelledby="shots-title">
-            <h2 id="shots-title">App Store previews</h2>
-            <div class="shot-scroll" tabindex="0" role="region" aria-label="Screenshot carousel">
-                <figure class="shot">
-                    <img src="assets/screenshots/01-home.webp" width="600" height="1300" alt="WordDex home screen showing decks and study options." loading="lazy" decoding="async">
-                    <figcaption>Home</figcaption>
-                </figure>
-                <figure class="shot">
-                    <img src="assets/screenshots/02-word-highlight.webp" width="600" height="1300" alt="Highlighting a word in text to create a flashcard." loading="lazy" decoding="async">
-                    <figcaption>Word highlight</figcaption>
-                </figure>
-                <figure class="shot">
-                    <img src="assets/screenshots/03-word-scope.webp" width="600" height="1300" alt="Word scope and context for a new card." loading="lazy" decoding="async">
-                    <figcaption>Word scope</figcaption>
-                </figure>
-                <figure class="shot">
-                    <img src="assets/screenshots/04-free-decks.webp" width="600" height="1300" alt="Free deck library in WordDex." loading="lazy" decoding="async">
-                    <figcaption>Free decks</figcaption>
-                </figure>
-                <figure class="shot">
-                    <img src="assets/screenshots/05-review.webp" width="600" height="1300" alt="Review session with flashcards." loading="lazy" decoding="async">
-                    <figcaption>Review</figcaption>
-                </figure>
-                <figure class="shot">
-                    <img src="assets/screenshots/06-mini-game.webp" width="600" height="1300" alt="Mini game for practice." loading="lazy" decoding="async">
-                    <figcaption>Mini game</figcaption>
-                </figure>
-            </div>
-        </section>
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Built in Tokyo · v1.0 Live</div>
+    <h1 class="hero-title">YOUR<br>WORLD<br>IS YOUR<br><em>TEXTBOOK.</em></h1>
+    <p class="hero-sub">Point your camera at any real-world text — <strong>WordDex builds an AI flashcard instantly</strong> with translation, reading, and grammar breakdown.</p>
+    <div class="hero-actions">
+      <a href="https://apps.apple.com/us/app/worddex/id6752800274" class="btn-primary" rel="noopener noreferrer">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download Free
+      </a>
+      <a href="#how" class="btn-secondary">How it works →</a>
     </div>
-    <script>
-        (function () {
-            var v = document.getElementById("hero-video");
-            if (!v) return;
-            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-                v.removeAttribute("autoplay");
-                v.pause();
-            }
-        })();
-    </script>
+    <div class="hero-stats">
+      <div><span class="stat-num">15+</span><span class="stat-label">Languages</span></div>
+      <div><span class="stat-num">JLPT</span><span class="stat-label">& TOEIC Ready</span></div>
+      <div><span class="stat-num">175</span><span class="stat-label">Countries</span></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="bracket tl"></div><div class="bracket tr"></div>
+    <div class="bracket bl"></div><div class="bracket br"></div>
+    <div class="hero-watermark">DEX</div>
+    <div class="phone-wrap">
+      <div class="phone-shell">
+        <div class="phone-screen">
+          <img src="assets/home.webp" alt="WordDex home screen." width="600" height="1300" loading="eager" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how" id="how">
+  <div class="section-head">
+    <span class="s-num">01</span>
+    <h2 class="s-title">HOW IT WORKS</h2>
+    <div class="s-rule"></div>
+  </div>
+
+  <div class="how-steps">
+
+    <div class="how-step">
+      <div class="how-copy">
+        <span class="how-tag">[ Step 1 — Scan ]</span>
+        <div class="how-name">Point &amp; Capture</div>
+        <p class="how-desc">Aim your camera at any real-world text — signs, menus, books, messages. Advanced OCR reads it instantly. No typing, no copying, no "I'll look it up later."</p>
+      </div>
+      <div class="how-shot">
+        <div class="phone-sm">
+          <div class="phone-screen">
+            <img src="assets/ocr.webp" alt="WordDex camera and text capture." width="600" height="1300" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-step reverse">
+      <div class="how-shot">
+        <div class="phone-sm-light">
+          <div class="phone-screen">
+            <img src="assets/flashcards.webp" alt="WordDex flashcard with readings and translation." width="600" height="1300" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+      <div class="how-copy">
+        <span class="how-tag">[ Step 2 — Learn ]</span>
+        <div class="how-name">Instant Card</div>
+        <p class="how-desc">AI generates a complete flashcard in seconds — translation, reading (furigana, pinyin, romanization), and grammar context tuned for CJK scripts and exam vocab.</p>
+      </div>
+    </div>
+
+    <div class="how-step">
+      <div class="how-copy">
+        <span class="how-tag">[ Step 3 — Review ]</span>
+        <div class="how-name">Spaced Repeat</div>
+        <p class="how-desc">Leitner-based spaced repetition brings the right cards back at the right time. Your flashcards are always front and center — ready whenever your day gives you a moment.</p>
+      </div>
+      <div class="how-shot">
+        <div class="phone-sm">
+          <div class="phone-screen">
+            <img src="assets/review.webp" alt="WordDex spaced repetition review." width="600" height="1300" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── WORD SCOPE ── -->
+<section class="wordscope" id="wordscope">
+  <div class="ws-left">
+    <div class="ws-badge">Premium Feature</div>
+    <h2 class="ws-title">WORD<br><span>SCOPE</span></h2>
+    <p class="ws-desc">The gap between knowing a word and actually using it. Word Scope closes it — real usage, tone analysis, and nuance that dictionaries miss.</p>
+    <ul class="ws-list">
+      <li>Grammar role in real sentences</li>
+      <li>Words native speakers reach for instead</li>
+      <li>Tone and register analysis</li>
+      <li>Idiomatic explanations, not just definitions</li>
+    </ul>
+  </div>
+  <div class="ws-right">
+    <div class="bracket tl"></div><div class="bracket br"></div>
+    <div class="ws-phone">
+      <div class="phone-screen">
+        <img src="assets/wordscope.webp" alt="WordDex decks and library." width="600" height="1300" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MATCH GAME ── -->
+<section class="game-section">
+  <div class="game-shot">
+    <div class="phone-game">
+      <div class="phone-screen">
+        <img src="assets/game.webp" alt="WordDex match game." width="600" height="1300" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+  <div class="game-copy">
+    <div class="section-head" style="margin-bottom: 0;">
+      <span class="s-num">02</span>
+      <h2 class="s-title">MATCH GAME</h2>
+    </div>
+    <p class="game-desc">Tap to pair words with their meanings before time runs out. Daily streaks and badges reward consistency, not perfection. Learning that feels like playing.</p>
+  </div>
+</section>
+
+<!-- ── EXAM DECKS ── -->
+<section class="decks" id="decks">
+  <div class="section-head">
+    <span class="s-num">03</span>
+    <h2 class="s-title">EXAM-READY FROM DAY ONE</h2>
+    <div class="s-rule"></div>
+  </div>
+  <div class="deck-chips">
+    <div class="deck-chip"><span class="deck-name">JLPT N5</span><span class="deck-sub">Free · 100 cards</span></div>
+    <div class="deck-chip"><span class="deck-name">JLPT N4</span><span class="deck-sub">Free · 100 cards</span></div>
+    <div class="deck-chip"><span class="deck-name">JLPT N3</span><span class="deck-sub">Premium · 100 cards</span></div>
+    <div class="deck-chip"><span class="deck-name">JLPT N2</span><span class="deck-sub">Premium · 100 cards</span></div>
+    <div class="deck-chip"><span class="deck-name">TOEIC</span><span class="deck-sub">Business · 100 cards</span></div>
+    <div class="deck-chip"><span class="deck-name">TOEIC</span><span class="deck-sub">Finance · 100 cards</span></div>
+    <div class="deck-chip"><span class="deck-name">TOPIK</span><span class="deck-sub">Coming soon</span></div>
+  </div>
+</section>
+
+<!-- ── LANGUAGES ── -->
+<section class="langs" id="languages">
+  <div class="section-head">
+    <span class="s-num">04</span>
+    <h2 class="s-title">15+ LANGUAGES</h2>
+    <div class="s-rule"></div>
+  </div>
+  <div class="lang-pills">
+    <div class="lang-pill primary">Japanese 🇯🇵</div>
+    <div class="lang-pill primary">Korean 🇰🇷</div>
+    <div class="lang-pill primary">Chinese 🇨🇳</div>
+    <div class="lang-pill">Spanish 🇪🇸</div>
+    <div class="lang-pill">French 🇫🇷</div>
+    <div class="lang-pill">German 🇩🇪</div>
+    <div class="lang-pill">Arabic 🇸🇦</div>
+    <div class="lang-pill">Hindi 🇮🇳</div>
+    <div class="lang-pill">Italian 🇮🇹</div>
+    <div class="lang-pill">Portuguese 🇵🇹</div>
+    <div class="lang-pill">Russian 🇷🇺</div>
+    <div class="lang-pill">Thai 🇹🇭</div>
+    <div class="lang-pill">Vietnamese 🇻🇳</div>
+    <div class="lang-pill">Tagalog 🇵🇭</div>
+    <div class="lang-pill">Esperanto 🌍</div>
+    <div class="lang-pill" style="border-style:dashed;color:var(--text-light);">More coming →</div>
+  </div>
+</section>
+
+<!-- ── FOOTER CTA ── -->
+<section class="footer-cta">
+  <div class="cta-eyebrow">Free to download · iOS · 175 countries</div>
+  <h2 class="cta-title">YOUR WORLD IS<br>YOUR TEXTBOOK.</h2>
+  <a href="https://apps.apple.com/us/app/worddex/id6752800274" class="cta-btn" rel="noopener noreferrer">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+    Download on the App Store
+  </a>
+  <div class="cta-sub">Built by a language learner in Tokyo</div>
+</section>
+
+<footer>
+  <a href="#" class="foot-logo">WORDDEX</a>
+  <ul class="foot-links">
+    <li><a href="mailto:worddex1@gmail.com">Support</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+  </ul>
+  <div class="foot-credit">© 2026 WordDex</div>
+</footer>
+
 </body>
 </html>
