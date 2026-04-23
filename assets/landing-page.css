@@ -623,8 +623,12 @@
     .how-step:not(.reverse) .how-copy,
     .how-step.reverse .how-copy { border: none; }
 
-    .wordscope { grid-template-columns: 1fr; padding: 64px 24px; }
-    .ws-left { padding-right: 0; padding-bottom: 0; }
+    .wordscope {
+      grid-template-columns: 1fr;
+      padding: 64px 24px;
+      row-gap: 48px;
+    }
+    .ws-left { padding-right: 0; }
     .ws-right {
       display: flex;
       padding: 48px 24px 56px;
