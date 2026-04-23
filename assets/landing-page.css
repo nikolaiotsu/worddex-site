@@ -549,7 +549,6 @@
     padding: 8px 16px; border: 1px solid var(--border); color: var(--text-mid); background: var(--card-white);
     cursor: default;
   }
-  .lang-pill.primary { border-color: var(--mauve); color: var(--mauve-deep); background: var(--mauve-pale); }
 
   /* ── FOOTER CTA ── */
   .footer-cta { padding: 120px 48px; background: var(--navy); text-align: center; position: relative; overflow: hidden; border-bottom: none; }
