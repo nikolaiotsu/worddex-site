@@ -398,67 +398,8 @@
   .s-rule { flex: 1; height: 1px; background: var(--border); align-self: center; }
 
   /* ── HOW IT WORKS ── */
+  /* 3 steps, each with a screenshot beside the copy */
   .how { padding: 96px 48px; background: var(--parchment); }
-  .how-lead {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-mid);
-    margin: 28px 0 0;
-    max-width: 36rem;
-  }
-
-  .panel-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 48px;
-  }
-  .panel-grid--2 {
-    grid-template-columns: repeat(2, minmax(0, 320px));
-    justify-content: center;
-  }
-  .feature-panel {
-    margin: 0;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    background: var(--card-white);
-    box-shadow: 0 16px 40px rgba(42, 26, 36, 0.12);
-  }
-  .feature-panel img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .lesson-play {
-    padding: 0 48px 96px;
-    background: var(--parchment);
-  }
-  .lesson-play .panel-grid {
-    margin-top: 0;
-  }
-
-  /* hero marketing panel (full App Store-style graphic) */
-  .hero-panel {
-    position: relative;
-    z-index: 1;
-    width: min(300px, 72%);
-    margin: 0;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.14);
-    box-shadow:
-      0 0 0 1px rgba(0,0,0,0.25),
-      0 28px 70px rgba(0,0,0,0.45);
-  }
-  .hero-panel img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  /* legacy how-step styles kept for JA/KO pages */
   .how-steps { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); }
 
   .how-step {
@@ -681,22 +622,8 @@
     .hero-right .phone-shell:hover {
       transform: none;
     }
-    .hero-panel {
-      width: min(300px, 82vw);
-      margin: 0 auto;
-    }
 
     .how { padding: 64px 24px; }
-    .how-lead { margin-top: 20px; }
-    .panel-grid,
-    .panel-grid--2 {
-      grid-template-columns: 1fr;
-      max-width: 340px;
-      margin-left: auto;
-      margin-right: auto;
-      gap: 16px;
-    }
-    .lesson-play { padding: 0 24px 64px; }
     .how-step,
     .how-step.reverse { grid-template-columns: 1fr; }
     .how-step.reverse .how-copy { order: 1; }
