@@ -143,7 +143,9 @@
             muted
             loop
             playsinline
-            preload="metadata"
+            webkit-playsinline
+            preload="auto"
+            disablepictureinpicture
             aria-label="WordDex demo: scan a word, then a 12-round lesson"
           ></video>
         </div>
@@ -344,6 +346,32 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var video = document.querySelector('.demo-slot__video');
+  if (!video) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function keepPlaying() {
+    if (document.hidden) return;
+    if (video.ended) video.currentTime = 0;
+    var playPromise = video.play();
+    if (playPromise && playPromise.catch) playPromise.catch(function () {});
+  }
+
+  video.addEventListener('pause', keepPlaying);
+  video.addEventListener('stalled', keepPlaying);
+  video.addEventListener('suspend', keepPlaying);
+  video.addEventListener('error', function () {
+    video.load();
+    keepPlaying();
+  });
+  document.addEventListener('visibilitychange', keepPlaying);
+  window.addEventListener('pageshow', keepPlaying);
+  keepPlaying();
+})();
+</script>
 
 </body>
 </html>

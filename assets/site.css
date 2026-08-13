@@ -180,17 +180,8 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
   top: 0;
   z-index: 100;
   height: var(--nav-h);
-  background: rgba(247, 251, 254, 0.96);
+  background: #F7FBFE;
   border-bottom: 1px solid var(--border);
-  /* Blur only where supported; solid fallback avoids scroll flicker over hero */
-}
-
-@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
-  .site-nav {
-    background: rgba(247, 251, 254, 0.88);
-    backdrop-filter: blur(12px) saturate(1.1);
-    -webkit-backdrop-filter: blur(12px) saturate(1.1);
-  }
 }
 
 .site-nav .container {
@@ -279,6 +270,7 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  isolation: isolate;
   /* Shadow on static wrapper — not on the animated layer (prevents flicker) */
   filter: drop-shadow(0 10px 20px rgba(10, 22, 40, 0.18));
 }
@@ -400,7 +392,6 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
 .hero {
   position: relative;
   padding: 56px 0 72px;
-  overflow: hidden;
   background:
     radial-gradient(ellipse 80% 60% at 15% 20%, rgba(42, 212, 255, 0.22), transparent 55%),
     radial-gradient(ellipse 70% 50% at 90% 10%, rgba(255, 229, 102, 0.18), transparent 50%),
@@ -481,17 +472,21 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
 
 .demo-slot__screen {
   aspect-ratio: 886 / 1920;
-  border-radius: 22px;
-  overflow: hidden;
   background: #000;
   line-height: 0;
+  /* No overflow:hidden here — Safari blanks hardware video on scroll
+     when rounded clips and a sticky header share a compositor. */
 }
 
 .demo-slot__video {
   width: 100%;
   height: auto;
   display: block;
-  vertical-align: top;
+  border-radius: 22px;
+  /* Own compositor layer; don't share with sticky nav / mascot filters */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* ── Sections ── */
