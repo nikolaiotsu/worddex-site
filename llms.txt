@@ -34,6 +34,17 @@ WordDex is built for learners who have basic familiarity with a language and wan
 - JLPT vocabulary app: https://worddex.io/jlpt-vocabulary-app/
 - Learn Korean: https://worddex.io/korean/
 - FAQ: https://worddex.io/faq/
+- Japanese homepage: https://worddex.io/ja/
+- Japanese Duolingo alternative: https://worddex.io/ja/duolingo-alternative/
+- Japanese learn English: https://worddex.io/ja/english/
+- Japanese learn Korean: https://worddex.io/ja/korean/
+- Japanese FAQ: https://worddex.io/ja/faq/
+- Korean homepage: https://worddex.io/ko/
+- Korean Duolingo alternative: https://worddex.io/ko/duolingo-alternative/
+- Korean learn English: https://worddex.io/ko/english/
+- Korean learn Japanese: https://worddex.io/ko/japanese/
+- Korean JLPT vocabulary: https://worddex.io/ko/jlpt-vocabulary-app/
+- Korean FAQ: https://worddex.io/ko/faq/
 
 ## Download
 

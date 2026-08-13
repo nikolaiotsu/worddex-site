@@ -3,236 +3,333 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="WordDex — 카메라로 글자만 비추면 AI 플래시카드로 바로 외웁니다.">
-<meta name="theme-color" content="#1a1216">
+<meta name="description" content="WordDex는 주변의 단어를 12라운드 레슨으로 바꿔 주는 언어 학습 앱입니다. 메뉴, 간판, 만화를 스캔하면 레슨이 시작됩니다. iOS에서 무료로 시작하세요.">
+<meta name="theme-color" content="#2AD4FF">
 <link rel="canonical" href="https://worddex.io/ko/">
 <link rel="alternate" hreflang="en" href="https://worddex.io/">
 <link rel="alternate" hreflang="ja" href="https://worddex.io/ja/">
 <link rel="alternate" hreflang="ko" href="https://worddex.io/ko/">
 <link rel="alternate" hreflang="x-default" href="https://worddex.io/">
-<title>WordDex — JLPT·토익·TOPIK AI 단어장</title>
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://worddex.io/ko/">
+<meta property="og:title" content="WordDex — 내 일상에서 시작하는 레슨">
+<meta property="og:description" content="주변의 단어를 12라운드 레슨으로. 스캔하고, 배우고, Dex에 모으세요.">
+<meta property="og:image" content="https://worddex.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WordDex — 내 일상에서 시작하는 레슨">
+<meta name="twitter:description" content="주변의 단어를 12라운드 레슨으로. 스캔하고, 배우고, Dex에 모으세요.">
+<meta name="twitter:image" content="https://worddex.io/assets/og.png">
+<title>WordDex — 내 일상에서 시작하는 레슨</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&family=DM+Sans:wght@300;400;500&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/landing-page.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Nunito:wght@700;800;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "WordDex",
+  "operatingSystem": "iOS",
+  "applicationCategory": "EducationalApplication",
+  "inLanguage": "ko",
+  "description": "WordDex는 주변의 단어를 12라운드 레슨으로 바꿔 주는 언어 학습 앱입니다. 메뉴, 간판, 만화 속 글자를 스캔해 배웁니다.",
+  "url": "https://worddex.io/ko/",
+  "downloadUrl": "https://apps.apple.com/kr/app/worddex/id6752800274?ct=website",
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "KRW", "description": "매일 쓸 수 있는 무료 플랜" },
+    { "@type": "Offer", "price": "0", "priceCurrency": "KRW", "description": "무제한 레슨과 시험 덱 전체 이용이 가능한 Premium" }
+  ]
+}
+</script>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="nav-logo">WORD<span>DEX</span></a>
-  <ul class="nav-links">
-    <li><a href="#how">사용 방법</a></li>
-    <li><a href="#study-packs">스터디 팩</a></li>
-    <li><a href="#decks">시험 덱</a></li>
-    <li><a href="#languages">지원 언어</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="lang-switch" role="group" aria-label="언어">
-      <a class="lang-switch__item" href="../index.html" lang="en">EN</a>
-      <a class="lang-switch__item" href="../ja/index.html" lang="ja">日本語</a>
-      <span class="lang-switch__item lang-switch__item--active" lang="ko">한국어</span>
-    </div>
-    <div class="store-cluster">
-      <a href="https://apps.apple.com/us/app/worddex/id6752800274" class="nav-cta" rel="noopener noreferrer">App Store</a>
-      <span class="btn-play-soon" role="text">Google Play — 준비 중</span>
-    </div>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-tag">도쿄에서 만듦 · v1.0 출시</div>
-    <h1 class="hero-title">당신의<br>세상 전체가<br>당신의<br><em>교과서.</em></h1>
-    <p class="hero-sub">현실의 글자를 카메라에 비추기만 하면 — <strong>WordDex가 AI 플래시카드를 즉시</strong> 만들어 줍니다. 번역, 읽기(후리가나·병음·로마자 표기), 문법 설명까지 한 번에.</p>
-    <div class="hero-actions">
-      <a href="https://apps.apple.com/us/app/worddex/id6752800274" class="btn-primary" rel="noopener noreferrer">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        무료 다운로드
-      </a>
-      <a href="#how" class="btn-secondary">사용 방법 보기 →</a>
-    </div>
-    <div class="hero-store-row">
-      <span class="btn-play-soon" role="text">Google Play — 준비 중</span>
-    </div>
-    <div class="hero-stats">
-      <div><span class="stat-num">15+</span><span class="stat-label">언어</span></div>
-      <div><span class="stat-num">N3+</span><span class="stat-label">JLPT &amp; 토익</span></div>
-      <div><span class="stat-num">175</span><span class="stat-label">국가</span></div>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="bracket tl"></div><div class="bracket tr"></div>
-    <div class="bracket bl"></div><div class="bracket br"></div>
-    <div class="hero-watermark">DEX</div>
-    <div class="phone-wrap">
-      <div class="phone-shell">
-        <div class="phone-screen">
-          <img src="../assets/home.png" alt="WordDex 홈 화면." width="600" height="1300" loading="eager" decoding="async">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="how" id="how">
-  <div class="section-head">
-    <span class="s-num">01</span>
-    <h2 class="s-title">이렇게 작동합니다</h2>
-    <div class="s-rule"></div>
-  </div>
-
-  <div class="how-steps">
-
-    <div class="how-step">
-      <div class="how-copy">
-        <span class="how-tag">[ 1단계 — 스캔 ]</span>
-        <div class="how-name">찍고 저장</div>
-        <p class="how-desc">간판, 메뉴, 책, 메시지 등 어떤 실제 글자든 카메라에 맞추세요. 고급 OCR이 바로 인식합니다. 타이핑도, 복사도, “나중에 찾아볼게”도 필요 없습니다.</p>
-      </div>
-      <div class="how-shot">
-        <div class="phone-sm">
-          <div class="phone-screen">
-            <img src="../assets/ocr.png" alt="WordDex 카메라와 텍스트 캡처." width="600" height="1300" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="how-step reverse">
-      <div class="how-shot">
-        <div class="phone-sm-light">
-          <div class="phone-screen">
-            <img src="../assets/flashcards.png" alt="읽기와 번역이 있는 WordDex 플래시카드." width="600" height="1300" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </div>
-      <div class="how-copy">
-        <span class="how-tag">[ 2단계 — 학습 ]</span>
-        <div class="how-name">Wordscope로 학습</div>
-        <p class="how-desc">AI가 몇 초 만에 완성된 플래시카드를 만듭니다 — 번역, 읽기(후리가나·병음·로마자), 한자권·시험 단어에 맞춘 문법 맥락까지.</p>
-      </div>
-    </div>
-
-    <div class="how-step">
-      <div class="how-copy">
-        <span class="how-tag">[ 3단계 — 복습 ]</span>
-        <div class="how-name">간격 반복</div>
-        <p class="how-desc">라이트너 방식의 간격 반복으로, 잊기 직전에 다시 만나게 합니다. 플래시카드는 항상 앞에 — 하루 중 잠깐의 시간에도 바로 이어서 복습할 수 있습니다.</p>
-      </div>
-      <div class="how-shot">
-        <div class="phone-sm">
-          <div class="phone-screen">
-            <img src="../assets/review.png" alt="WordDex 간격 반복 복습." width="600" height="1300" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="wordscope" id="study-packs">
-  <div class="ws-left">
-    <div class="ws-badge">변명은 이제 그만</div>
-    <h2 class="ws-title">바로 쓰는<br><span>스터디 덱</span></h2>
-    <p class="ws-desc">관심 있는 언어용으로 골라 쓴 스터디 팩을 둘러보세요 — 문자 입문, JLPT N3부터, 토익 테마 등. 각 팩은 카드 수를 미리 보여 주고, 무료·유료 구역도 분명해서 탭 한 번이면 설치하고 곧바로 복습으로 들어갈 수 있습니다.</p>
-    <ul class="ws-list">
-      <li>“For you”, “All”, “Premium” 탭으로 카탈로그를 빠르게 좁히기</li>
-      <li>현실에서 만든 카드 옆에, 바로 설치해 쓸 수 있는 덱</li>
-      <li>무료 스타터로 시작하고, 준비되면 프리미엄 깊이로 확장</li>
-      <li>새 팩이 계속 추가 — 라이브러리가 낡지 않습니다</li>
+<header class="site-nav">
+  <div class="container">
+    <a href="/ko/" class="nav-logo">Word<span>Dex</span></a>
+    <ul class="nav-links">
+      <li><a href="/ko/english/">영어</a></li>
+      <li><a href="/ko/japanese/">일본어</a></li>
+      <li><a href="/ko/jlpt-vocabulary-app/" class="nav-link--hide-mobile">JLPT</a></li>
+      <li><a href="/ko/duolingo-alternative/" class="nav-link--hide-mobile">비교</a></li>
+      <li><a href="/ko/faq/">FAQ</a></li>
     </ul>
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="언어">
+        <a class="lang-switch__item" href="/" lang="en">EN</a>
+        <a class="lang-switch__item" href="/ja/" lang="ja">日本語</a>
+        <span class="lang-switch__item lang-switch__item--active" lang="ko">한국어</span>
+      </div>
+      <a href="https://apps.apple.com/kr/app/worddex/id6752800274?ct=website" class="btn btn--primary btn--sm nav-cta" rel="noopener noreferrer">App Store</a>
+    </div>
   </div>
-  <div class="ws-right">
-    <div class="bracket tl"></div><div class="bracket br"></div>
-    <div class="ws-phone">
-      <div class="phone-screen">
-        <img src="../assets/decks.png" alt="WordDex 시험 덱과 라이브러리." width="600" height="1300" loading="lazy" decoding="async">
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-mascot-wrap">
+          <div class="mascot-stage mascot-stage--hero">
+            <div class="mascot-float-wrap">
+              <div class="sparkles" aria-hidden="true">
+                <span class="sparkle" style="--x:-0.06;--y:0.10;--sz:7px;--delay:0ms;--dur:1.4s;--spark-color:#FFE566"></span>
+                <span class="sparkle" style="--x:0.52;--y:-0.10;--sz:8px;--delay:420ms;--dur:1.5s;--spark-color:#2AD4FF"></span>
+                <span class="sparkle" style="--x:1.04;--y:0.22;--sz:7px;--delay:260ms;--dur:1.45s;--spark-color:#FFE566"></span>
+                <span class="sparkle" style="--x:0.78;--y:1.05;--sz:8px;--delay:760ms;--dur:1.5s;--spark-color:#2AD4FF"></span>
+                <span class="sparkle" style="--x:-0.04;--y:0.78;--sz:6px;--delay:380ms;--dur:1.48s;--spark-color:#fff"></span>
+                <span class="sparkle" style="--x:0.18;--y:-0.08;--sz:5px;--delay:180ms;--dur:1.55s;--spark-color:#2AD4FF"></span>
+              </div>
+              <img src="/assets/mascot.png" alt="" class="mascot-img" width="150" height="150" loading="eager" decoding="async">
+            </div>
+          </div>
+        </div>
+        <p class="eyebrow">도쿄에서</p>
+        <h1>내 일상에서 시작하는 레슨</h1>
+        <p class="lead">메뉴, 간판, 만화에서 본 단어를 스캔하면, 그 단어로 12라운드 레슨이 시작됩니다. 외울 말은 지금 내 일상에서 나옵니다.</p>
+        <div class="hero-actions">
+          <a href="https://apps.apple.com/kr/app/worddex/id6752800274?ct=website" class="btn btn--appstore" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          <a href="#how-it-works" class="btn btn--secondary">사용법</a>
+        </div>
+        <p class="hero-note">무료로 시작 · iOS · Android는 준비 중</p>
+      </div>
+      <div class="demo-slot">
+        <div class="demo-slot__screen">
+          <video
+            class="demo-slot__video"
+            src="/assets/demo.mp4"
+            poster="/assets/demo-poster.jpg"
+            width="886"
+            height="1920"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            preload="auto"
+            disablepictureinpicture
+            aria-label="WordDex 데모. 단어를 스캔하면 레슨이 시작됩니다"
+          ></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">사용법</p>
+        <h2>길에서 본 단어가 Dex 레슨이 됩니다</h2>
+        <p>단계는 넷. 타이핑은 필요 없습니다. 발견한 단어를 바로 연습할 수 있습니다.</p>
+      </div>
+      <div class="steps">
+        <article class="step-card">
+          <span class="step-card__num">01</span>
+          <h3>단어 발견</h3>
+          <p>메뉴, 거리 간판, 상품 라벨, 만화 컷에서 배우고 싶은 글자를 발견합니다.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-card__num">02</span>
+          <h3>스캔</h3>
+          <p>글자에 카메라만 갖다 대면 됩니다. WordDex가 읽은 뒤, 배울 단어를 고를 수 있습니다.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-card__num">03</span>
+          <h3>12라운드 레슨</h3>
+          <p>의미 맞추기, 빈칸 채우기, 문장 만들기, 말하기. 그 단어에 맞춘 연습입니다.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-card__num">04</span>
+          <h3>Dex에 모으기</h3>
+          <p>단어는 나만의 어휘 컬렉션으로 들어갑니다. 외워질 때까지, 간격 반복으로 다시 나옵니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">다른 앱과 다른 점</p>
+        <h2>준비된 단어가 아니라, 내가 만난 단어</h2>
+        <p>대부분의 언어 앱은 정해진 순서로 가르칩니다. WordDex는 실제로 만난 단어로 레슨을 만듭니다. 여행에서도, 일상에서도, 지금 읽고 있는 것에도 바로 쓸 수 있습니다.</p>
+      </div>
+      <div class="card-grid">
+        <article class="feature-card">
+          <h3>내 주변의 말부터</h3>
+          <p>레슨은 내가 고른 단어에서 시작합니다. 쓰지 않을 교과서 예문이 아닙니다.</p>
+        </article>
+        <article class="feature-card">
+          <h3>정의가 아니라 레슨</h3>
+          <p>의미, 맥락, 문장, 말하기. 단어마다 12라운드 연습이 있습니다.</p>
+        </article>
+        <article class="feature-card">
+          <h3>나와 함께 자라는 Dex</h3>
+          <p>컬렉션은 실제로 만난 말에서 자랍니다. 모은 단어를 외워질 때까지 복습합니다.</p>
+        </article>
+        <article class="feature-card">
+          <h3>시험 덱도 있습니다</h3>
+          <p>JLPT, TOEIC, TOPIK 덱을 준비했습니다. 스캔한 단어와 같은 레슨 형식입니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="exam-decks">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">시험 덱</p>
+        <h2>JLPT, TOEIC, TOPIK — 무료로 시작</h2>
+        <p>시험 대비용 덱. 각 시험의 첫 주제는 무료입니다. 덱 단어도 스캔한 단어와 같은 레슨이 됩니다.</p>
+      </div>
+      <div class="deck-grid">
+        <div class="deck-chip">
+          <strong>JLPT</strong>
+          <span>무료 · 레벨당 처음 3개 주제 (전체 6)</span>
+        </div>
+        <div class="deck-chip">
+          <strong>TOEIC</strong>
+          <span>무료 · 처음 3개 테마 (전체 6)</span>
+        </div>
+        <div class="deck-chip">
+          <strong>TOPIK</strong>
+          <span>무료 · 처음 3개 주제 (전체 6)</span>
+        </div>
+        <div class="deck-chip">
+          <strong>초급 덱</strong>
+          <span>무료 · Essential 100 + 문자 팩</span>
+        </div>
+      </div>
+      <nav class="home-links" aria-label="관련 페이지">
+        <a href="/ko/english/">스캔으로 영어 배우기 →</a>
+        <a href="/ko/japanese/">일본어 배우기 →</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section section--surface" id="languages">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">지원 언어</p>
+        <h2>15개 이상 언어 지원</h2>
+        <p>일상에서 만나는 언어의 어휘를 같은 흐름으로 배울 수 있습니다.</p>
+      </div>
+      <div class="lang-grid">
+        <span class="lang-pill">일본어</span>
+        <span class="lang-pill">한국어</span>
+        <span class="lang-pill">중국어</span>
+        <span class="lang-pill">스페인어</span>
+        <span class="lang-pill">프랑스어</span>
+        <span class="lang-pill">독일어</span>
+        <span class="lang-pill">아랍어</span>
+        <span class="lang-pill">힌디어</span>
+        <span class="lang-pill">이탈리아어</span>
+        <span class="lang-pill">포르투갈어</span>
+        <span class="lang-pill">러시아어</span>
+        <span class="lang-pill">태국어</span>
+        <span class="lang-pill">베트남어</span>
+        <span class="lang-pill">타갈로그어</span>
+        <span class="lang-pill">에스페란토</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">요금</p>
+        <h2>매일 무료. 더 배우고 싶을 때 Premium.</h2>
+      </div>
+      <div class="pricing-row">
+        <article class="pricing-card">
+          <h3>무료</h3>
+          <p>매일 연습, 초급 덱, 각 시험의 첫 주제. 결제 없이도 매일의 습관을 만들 수 있습니다.</p>
+        </article>
+        <article class="pricing-card pricing-card--highlight">
+          <h3>Premium</h3>
+          <p>무제한 레슨, 시험 덱 전체, 광고 없음. 더 깊게 배우고 싶을 때를 위한 플랜입니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>보고, 배우고, 모으세요.</h2>
+      <p>iOS에서 무료로 시작 · 도쿄의 언어 학습자가 만들었습니다</p>
+      <a href="https://apps.apple.com/kr/app/worddex/id6752800274?ct=website" class="btn btn--primary" rel="noopener noreferrer">App Store에서 WordDex 받기</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ko/" class="nav-logo">Word<span>Dex</span></a>
+        <p>내 일상에서 시작하는 레슨. 주변의 단어를 연습으로 바꿉니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>배우기</h4>
+        <ul>
+          <li><a href="/ko/english/">영어</a></li>
+          <li><a href="/ko/japanese/">일본어</a></li>
+          <li><a href="/ko/jlpt-vocabulary-app/">JLPT 앱</a></li>
+          <li><a href="/ko/duolingo-alternative/">앱 비교</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>앱</h4>
+        <ul>
+          <li><a href="/ko/faq/">FAQ</a></li>
+          <li><a href="https://apps.apple.com/kr/app/worddex/id6752800274?ct=website" rel="noopener noreferrer">App Store</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SNS</h4>
+        <div class="footer-social">
+          <a href="https://www.tiktok.com/@worddexeng" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.instagram.com/worddexenglish" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.youtube.com/@WordDexLanguages" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 WordDex</span>
+      <div class="footer-legal">
+        <a href="https://rapid-inch-201.notion.site/WordDex-Support-and-FAQs-336b8594739e8086a073e1d10dfadc45?source=copy_link" rel="noopener noreferrer">지원</a>
+        <a href="https://www.notion.so/WordDex-Privacy-Policy-2bcb8594739e80f7814ffea26df1c3a9?source=copy_link" rel="noopener noreferrer">개인정보 처리방침</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener noreferrer">EULA</a>
       </div>
     </div>
   </div>
-</section>
-
-<section class="game-section">
-  <div class="game-shot">
-    <div class="phone-game">
-      <div class="phone-screen">
-        <img src="../assets/more.png" alt="WordDex 매치 게임 등." width="600" height="1300" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </div>
-  <div class="game-copy">
-    <div class="section-head" style="margin-bottom: 0;">
-      <span class="s-num">02</span>
-      <h2 class="s-title">매치 게임</h2>
-    </div>
-    <p class="game-desc">시간이 끝나기 전에 단어와 뜻을 탭으로 짝 맞추세요. 연속 학습 일수와 배지는 완벽함이 아니라 꾸준함을 칭찬합니다. 놀이처럼 느껴지는 학습.</p>
-  </div>
-</section>
-
-<section class="decks" id="decks">
-  <div class="section-head">
-    <span class="s-num">03</span>
-    <h2 class="s-title">무료로 시작하는<br><span>시험 덱</span></h2>
-    <div class="s-rule"></div>
-  </div>
-  <div class="deck-chips">
-    <div class="deck-chip"><span class="deck-name">JLPT N3</span><span class="deck-sub">무료 · 핵심 6주제</span></div>
-    <div class="deck-chip"><span class="deck-name">JLPT N2</span><span class="deck-sub">무료 스타터 · 100장 이상</span></div>
-    <div class="deck-chip"><span class="deck-name">TOEIC</span><span class="deck-sub">무료 · 비즈니스 · 100장</span></div>
-    <div class="deck-chip"><span class="deck-name">TOEIC</span><span class="deck-sub">무료 · 금융 · 100장</span></div>
-    <div class="deck-chip"><span class="deck-name">TOPIK</span><span class="deck-sub">곧 공개</span></div>
-  </div>
-</section>
-
-<section class="langs" id="languages">
-  <div class="section-head">
-    <span class="s-num">04</span>
-    <h2 class="s-title">15개 이상의 언어</h2>
-    <div class="s-rule"></div>
-  </div>
-  <div class="lang-pills">
-    <div class="lang-pill">일본어 🇯🇵</div>
-    <div class="lang-pill">한국어 🇰🇷</div>
-    <div class="lang-pill">중국어 🇨🇳</div>
-    <div class="lang-pill">스페인어 🇪🇸</div>
-    <div class="lang-pill">프랑스어 🇫🇷</div>
-    <div class="lang-pill">독일어 🇩🇪</div>
-    <div class="lang-pill">아랍어 🇸🇦</div>
-    <div class="lang-pill">힌디어 🇮🇳</div>
-    <div class="lang-pill">이탈리아어 🇮🇹</div>
-    <div class="lang-pill">포르투갈어 🇵🇹</div>
-    <div class="lang-pill">러시아어 🇷🇺</div>
-    <div class="lang-pill">태국어 🇹🇭</div>
-    <div class="lang-pill">베트남어 🇻🇳</div>
-    <div class="lang-pill">타갈로그어 🇵🇭</div>
-    <div class="lang-pill">에스페란토 🌍</div>
-    <div class="lang-pill" style="border-style:dashed;color:var(--text-light);">더 추가 예정 →</div>
-  </div>
-</section>
-
-<section class="footer-cta">
-  <h2 class="cta-title">AI 기반 언어 플래시카드.<br>단어를 본 순간, 평생 내 것으로.</h2>
-  <div class="footer-store-row">
-    <a href="https://apps.apple.com/us/app/worddex/id6752800274" class="cta-btn" rel="noopener noreferrer">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      App Store에서 다운로드
-    </a>
-    <span class="btn-play-soon btn-play-soon--on-dark" role="text">Google Play — 준비 중</span>
-  </div>
-  <div class="cta-sub">무료 다운로드 · iOS · 175개국 · 도쿄의 언어 학습자가 직접 개발</div>
-</section>
-
-<footer>
-  <a href="#" class="foot-logo">WORDDEX</a>
-  <ul class="foot-links">
-    <li><a href="https://rapid-inch-201.notion.site/WordDex-Support-and-FAQs-336b8594739e8086a073e1d10dfadc45?source=copy_link" rel="noopener noreferrer">문의</a></li>
-    <li><a href="https://www.notion.so/WordDex-Privacy-Policy-2bcb8594739e80f7814ffea26df1c3a9?source=copy_link" rel="noopener noreferrer">개인정보 처리방침</a></li>
-    <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener noreferrer">이용약관</a></li>
-  </ul>
-  <div class="foot-credit">© 2026 WordDex</div>
 </footer>
+
+<script>
+(function () {
+  var video = document.querySelector('.demo-slot__video');
+  if (!video) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function keepPlaying() {
+    if (document.hidden) return;
+    if (video.ended) video.currentTime = 0;
+    var playPromise = video.play();
+    if (playPromise && playPromise.catch) playPromise.catch(function () {});
+  }
+  video.addEventListener('pause', keepPlaying);
+  video.addEventListener('stalled', keepPlaying);
+  video.addEventListener('suspend', keepPlaying);
+  video.addEventListener('error', function () { video.load(); keepPlaying(); });
+  document.addEventListener('visibilitychange', keepPlaying);
+  window.addEventListener('pageshow', keepPlaying);
+  keepPlaying();
+})();
+</script>
 
 </body>
 </html>

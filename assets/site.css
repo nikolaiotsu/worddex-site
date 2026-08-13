@@ -254,10 +254,45 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
   background: var(--cyan-soft);
 }
 
-.lang-switch__item--disabled {
-  color: #B8C5D1;
-  cursor: not-allowed;
-  user-select: none;
+.lang-switch a.lang-switch__item:hover {
+  color: var(--ink);
+  background: var(--cyan-soft);
+}
+
+html[lang="ja"] body,
+html[lang="ko"] body {
+  line-height: 1.75;
+}
+
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+html[lang="ja"] .nav-logo,
+html[lang="ja"] .btn,
+html[lang="ja"] .eyebrow {
+  font-family: "Zen Kaku Gothic New", var(--font-display), sans-serif;
+}
+
+html[lang="ja"] body {
+  font-family: "Zen Kaku Gothic New", var(--font-body), sans-serif;
+}
+
+html[lang="ko"] h1,
+html[lang="ko"] h2,
+html[lang="ko"] h3,
+html[lang="ko"] .nav-logo,
+html[lang="ko"] .btn,
+html[lang="ko"] .eyebrow {
+  font-family: "Noto Sans KR", var(--font-display), sans-serif;
+}
+
+html[lang="ko"] body {
+  font-family: "Noto Sans KR", var(--font-body), sans-serif;
+}
+
+html[lang="ja"] .lead,
+html[lang="ko"] .lead {
+  max-width: 42ch;
 }
 
 .nav-cta { display: none; }
