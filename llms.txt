@@ -1,0 +1,47 @@
+# WordDex
+
+> WordDex is a language-learning app for iOS that turns real-world words into full interactive lessons. Tagline: "Fun lessons from your world."
+
+WordDex is built for learners who have basic familiarity with a language and want to practice vocabulary from their everyday environment — menus, signs, manga, subtitles, product labels — not just from a fixed curriculum.
+
+## How it works
+
+1. See a word in real text
+2. Scan it with your camera
+3. WordDex automatically builds a 12-round lesson (matching, fill-in-the-blank, sentence building, speaking)
+4. The word joins your personal Dex for spaced repetition review
+
+## Key differentiators
+
+- Lessons built from YOUR words, not a textbook sequence
+- Full 12-round lessons, not just definitions or flashcards
+- Pre-loaded exam decks for JLPT, TOEIC, and TOPIK (first topics free)
+- 15+ languages supported
+- Free to start daily; Premium for unlimited practice
+
+## Who it's for
+
+- Learners who finished beginner courses but struggle with real-world text
+- People living in or traveling to countries where their target language is spoken
+- Manga readers, K-drama watchers, and media consumers who want to learn words as they encounter them
+- JLPT, TOEIC, and TOPIK exam candidates
+
+## Pages
+
+- Homepage: https://worddex.io/
+- Duolingo alternative / post-beginner learners: https://worddex.io/duolingo-alternative/
+- Learn Japanese by scanning: https://worddex.io/japanese/
+- JLPT vocabulary app: https://worddex.io/jlpt-vocabulary-app/
+- Learn Korean: https://worddex.io/korean/
+- FAQ: https://worddex.io/faq/
+
+## Download
+
+- iOS App Store: https://apps.apple.com/us/app/worddex/id6752800274?ct=website
+- Android: planned
+
+## Company
+
+- Built in Tokyo
+- Website: https://worddex.io/
+- Support: https://rapid-inch-201.notion.site/WordDex-Support-and-FAQs-336b8594739e8086a073e1d10dfadc45
