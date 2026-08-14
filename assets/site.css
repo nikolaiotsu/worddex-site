@@ -236,7 +236,7 @@ h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
 }
 
 .lang-switch {
-  display: none;
+  display: flex;
   gap: 2px;
   align-items: center;
   font-size: 0.75rem;
@@ -1044,7 +1044,6 @@ html[lang="ko"] .lead {
 
 @media (min-width: 768px) {
   .nav-links { display: flex; }
-  .lang-switch { display: flex; }
   .nav-cta { display: inline-flex; }
 
   .hero .container {
@@ -1067,4 +1066,6 @@ html[lang="ko"] .lead {
 
 @media (max-width: 767px) {
   .nav-links .nav-link--hide-mobile { display: none; }
+  .lang-switch { font-size: 0.6875rem; }
+  .lang-switch__item { padding: 4px 6px; }
 }
