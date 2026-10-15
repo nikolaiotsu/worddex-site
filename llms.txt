@@ -1,6 +1,6 @@
 # WordDex
 
-> WordDex is a language-learning app for iOS that turns anything into a 12-round lesson. Tagline: "Turn anything into a language lesson." See a word. Learn it. Collect it.
+> WordDex is a language-learning app for iOS that turns anything into a 12-round lesson. Tagline: "Turn anything into a language lesson." Show it. Tell it. Shake it.
 
 Scan a word, describe a situation, or shake your phone. WordDex builds a lesson around it: matching, fill-in-the-blank, sentence building, and speaking out loud. Built in Tokyo by a language learner who needed this app to exist.
 
