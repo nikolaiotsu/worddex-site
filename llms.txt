@@ -23,7 +23,7 @@ Scan a word, describe a situation, or shake your phone. WordDex builds a lesson 
 - Practice before a real situation happens
 - Voice practice in every lesson
 - Word Scope: conversational usage, grammar, tone, and what a native speaker would say instead
-- Matching games, timed Match rounds, sentence building, streaks, and badges
+- Matching games, timed Match rounds, sentence building, and streaks
 - Personal Dex with spaced repetition
 - Reading courses for Hiragana, Katakana, and Hangul from zero
 - Free beginner decks for every language
