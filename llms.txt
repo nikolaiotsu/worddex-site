@@ -1,30 +1,45 @@
 # WordDex
 
-> WordDex is a language-learning app for iOS that turns real-world words into full interactive lessons. Tagline: "Fun lessons from your world."
+> WordDex is a language-learning app for iOS that turns anything into a 12-round lesson. Tagline: "Turn anything into a language lesson." See a word. Learn it. Collect it.
 
-WordDex is built for learners who have basic familiarity with a language and want to practice vocabulary from their everyday environment — menus, signs, manga, subtitles, product labels — not just from a fixed curriculum.
+Scan a word, describe a situation, or shake your phone. WordDex builds a lesson around it: matching, fill-in-the-blank, sentence building, and speaking out loud. Built in Tokyo by a language learner who needed this app to exist.
 
 ## How it works
 
-1. See a word in real text
-2. Scan it with your camera
-3. WordDex automatically builds a 12-round lesson (matching, fill-in-the-blank, sentence building, speaking)
-4. The word joins your personal Dex for spaced repetition review
+1. Show, tell, or shake
+2. Get a 12-round lesson: match, fill in the blanks, build sentences, speak out loud
+3. Review with spaced repetition until it sticks
+4. Collect it in your Personal Dex
+
+## Three ways to start
+
+- Show it. Scan any word in the wild: a menu, a sign, a manga page.
+- Tell it. Type a situation or topic ("ordering coffee," "my flight got cancelled," "dinosaurs") and get a lesson built around it, including key phrases, a model dialogue, and teacher-style advice tuned to your learner profile.
+- Shake it. Shake your phone and Dexy, a sleepy lesson-maker, wakes up with a surprise lesson from your interests and learner profile.
 
 ## Key differentiators
 
-- Lessons built from YOUR words, not a textbook sequence
-- Full 12-round lessons, not just definitions or flashcards
-- Pre-loaded exam decks for JLPT, TOEIC, and TOPIK (first topics free)
-- 15+ languages supported
-- Free to start daily; Premium for unlimited practice
+- Lessons built from your life, not a fixed word list
+- Practice before a real situation happens
+- Voice practice in every lesson
+- Word Scope: conversational usage, grammar, tone, and what a native speaker would say instead
+- Matching games, timed Match rounds, sentence building, streaks, and badges
+- Personal Dex with spaced repetition
+- Reading courses for Hiragana, Katakana, and Hangul from zero
+- Free beginner decks for every language
+- Curated JLPT, TOPIK, and TOEIC exam decks
+- 16 languages: English, Japanese, Korean, Chinese, Spanish, French, German, Italian, Portuguese, Russian, Arabic, Hindi, Thai, Vietnamese, Tagalog, and Esperanto
+- Furigana, Pinyin, and Romanization
+- Free every day: shake, scan, learn, and review
+- Premium: generous lesson creation, full Word Scope access, and an ad-free experience
 
 ## Who it's for
 
-- Learners who finished beginner courses but struggle with real-world text
-- People living in or traveling to countries where their target language is spoken
-- Manga readers, K-drama watchers, and media consumers who want to learn words as they encounter them
-- JLPT, TOEIC, and TOPIK exam candidates
+- Complete beginners learning to read Hiragana, Katakana, or Hangul
+- Learners who want lessons from menus, signs, manga, and daily life
+- People preparing for a real situation: a date, a doctor's visit, a hotel check-in, an interview
+- JLPT, TOEIC, and TOPIK candidates
+- Anyone who would rather shake the phone than stare at an empty library
 
 ## Pages
 
@@ -50,6 +65,7 @@ WordDex is built for learners who have basic familiarity with a language and wan
 
 - iOS App Store: https://apps.apple.com/us/app/worddex/id6752800274?ct=website
 - Android: planned
+- Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 
 ## Company
 

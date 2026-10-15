@@ -1061,6 +1061,7 @@ html[lang="ko"] .lead {
 
 @media (min-width: 900px) {
   .steps { grid-template-columns: repeat(4, 1fr); }
+  .steps.steps--three { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
 }
 
